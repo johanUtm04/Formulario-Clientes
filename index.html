@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>PIHCSA - Registro de Documentación</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/ventana_modal.css" />
+    <style>
+        .contenedor_formulario {
+            width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .segmento h3 {
+            background: #eee;
+            color: #005596;
+            padding: 8px;
+            font-size: 14px;
+            border-left: 4px solid #005596;
+            margin-bottom: 15px;
+        }
+        .segmento-campo {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .segmento-campo p {
+            width: 220px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+        .campo {
+            width: 350px;
+            padding: 4px;
+            border: 1px solid #ccc;
+        }
+        .campo_file {
+            font-size: 11px;
+        }
+        .btn_pihcsa {
+            background: #005596;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn_pihcsa:hover { background: #003d6b; }
+    </style>
+</head>
+<body>
+
+<div class="contenedor_formulario">
+    <div class="producto-titulo">
+        <h3 style="color: #005596; border-bottom: 2px solid #005596; padding-bottom: 5px;">
+            REGISTRO DE PROVEEDORES Y EXPEDIENTE DIGITAL
+        </h3>
+    </div>
+
+    <form name="registro_pihcsa" action="procesar.php" method="post" enctype="multipart/form-data">
+        
+        <div class="segmento">
+            <h3>1. DATOS GENERALES</h3>
+            <div class="segmento-campo"><p>Razón Social:</p><input type="text" class="campo" name="razon_social" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>Domicilio:</p><input type="text" class="campo" name="domicilio" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>Población (Ciudad):</p><input type="text" class="campo" name="poblacion" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>Colonia:</p><input type="text" class="campo" name="colonia" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>Código Postal:</p><input type="text" class="campo" name="cp" required><font color="red">*</font></div>
+            <div class="segmento-campo">
+                <p>Estado:</p>
+                <select class="campo" name="estado">
+                    <option value="Michoacán">Michoacán</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Estado de México">Estado de México</option>
+                </select>
+            </div>
+            <div class="segmento-campo"><p>R.F.C.:</p><input type="text" class="campo" name="rfc" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>Página Web:</p><input type="text" class="campo" name="web"></div>
+            <div class="segmento-campo"><p>Teléfono:</p><input type="text" class="campo" name="telefono" required><font color="red">*</font></div>
+            <div class="segmento-campo"><p>E-mail:</p><input type="email" class="campo" name="email" required><font color="red">*</font></div>
+        </div>
+
+        <div class="segmento">
+            <h3>2. CARGA DE DOCUMENTOS (FORMATO PDF)</h3>
+            <div class="segmento-campo"><p>Licencia Sanitaria:</p><input type="file" class="campo_file" name="pdf_licencia" accept=".pdf"></div>
+            <div class="segmento-campo"><p>Aviso Responsable:</p><input type="file" class="campo_file" name="pdf_aviso_rs" accept=".pdf"></div>
+            <div class="segmento-campo"><p>Aviso Funcionamiento:</p><input type="file" class="campo_file" name="pdf_aviso_func" accept=".pdf"></div>
+            <div class="segmento-campo"><p>INE Responsable Sanitario:</p><input type="file" class="campo_file" name="pdf_ine_rs" accept=".pdf"></div>
+            <div class="segmento-campo"><p>INE Representante Legal:</p><input type="file" class="campo_file" name="pdf_ine_rep" accept=".pdf"></div>
+            <div class="segmento-campo"><p>Comprobante de Domicilio:</p><input type="file" class="campo_file" name="pdf_comprobante" accept=".pdf"></div>
+        </div>
+
+        <div style="text-align: center;">
+            <input type="submit" class="btn_pihcsa" value="FINALIZAR REGISTRO">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

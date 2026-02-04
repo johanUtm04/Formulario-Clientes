@@ -36,3 +36,23 @@ function cerrarModal() {
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 }
+
+function aceptarAdvertencia() {
+    const modalAdv = document.getElementById('modalAdvertencia');
+    if (modalAdv) {
+        modalAdv.style.display = 'none';
+        // Quitamos el bloqueo del scroll si lo pusiste
+        document.body.classList.remove('bloqueado');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const modalAdv = document.getElementById('modalAdvertencia');
+    
+    if (urlParams.get('status') === 'success') {
+        if (modalAdv) modalAdv.style.display = 'none';
+    } else {
+        document.body.classList.add('bloqueado');
+    }
+});

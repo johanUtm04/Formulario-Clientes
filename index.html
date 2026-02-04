@@ -3,106 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>PIHCSA - Registro de Documentación</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/ventana_modal.css" />
-    <style>
-        .contenedor_formulario {
-            width: 1000px;
-            margin: 20px auto;
-            border: 1px solid #ddd;
-            padding: 20px;
-            background: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .producto-titulo h3 {
-            color: #005596; 
-            border-bottom: 2px solid #005596; 
-            padding-bottom: 5px;
-            margin-top: 0;
-        }
-        .columnas-flex {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-        }
-        .segmento {
-            flex: 1;
-        }
-        .segmento h3 {
-            background: #eee;
-            color: #005596;
-            padding: 8px;
-            font-size: 14px;
-            border-left: 4px solid #005596;
-            margin-bottom: 15px;
-        }
-        .segmento-campo {
-            margin-bottom: 12px;
-        }
-        .segmento-campo p {
-            margin: 0 0 5px 0;
-            font-size: 12px;
-            font-weight: bold;
-            color: #333;
-        }
-        .campo {
-            width: 95%;
-            padding: 6px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .campo_file {
-            font-size: 11px;
-            width: 100%;
-            padding: 5px;
-            border: 1px solid #ddd;
-            background: #fafafa;
-            transition: all 0.3s ease;
-        }
-        /* CSS para indicar archivo adjunto */
-        .archivo-adjuntado {
-            border: 1px solid #28a745 !important;
-            background-color: #e9f7ef !important;
-            color: #155724;
-        }
-        .btn_pihcsa {
-            background: #005596;
-            color: #fff;
-            border: none;
-            padding: 12px 40px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            border-radius: 4px;
-        }
-        .btn_pihcsa:hover { background: #003d6b; }
-        #modalExito {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-        .modal-contenido {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 30px;
-            border-radius: 10px;
-            width: 400px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .btn_cerrar {
-            background-color: #005596;
-            color: white;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body>
 
@@ -132,14 +33,39 @@
                 <div class="segmento-campo">
                     <p>Estado: <font color="red">*</font></p>
                     <select class="campo" name="estado" required>
-                        <option value="Michoacán" selected>Michoacán</option>
-                        <option value="Aguascalientes">Aguascalientes</option>
-                        <option value="Baja California">Baja California</option>
-                        <option value="CDMX">Ciudad de México</option>
-                        <option value="Jalisco">Jalisco</option>
-                        <option value="Guanajuato">Guanajuato</option>
-                        <option value="Querétaro">Querétaro</option>
-                    </select>
+    <option value="Aguascalientes">Aguascalientes</option>
+    <option value="Baja California">Baja California</option>
+    <option value="Baja California Sur">Baja California Sur</option>
+    <option value="Campeche">Campeche</option>
+    <option value="Chiapas">Chiapas</option>
+    <option value="Chihuahua">Chihuahua</option>
+    <option value="CDMX">Ciudad de México</option>
+    <option value="Coahuila">Coahuila</option>
+    <option value="Colima">Colima</option>
+    <option value="Durango">Durango</option>
+    <option value="Estado de México">Estado de México</option>
+    <option value="Guanajuato">Guanajuato</option>
+    <option value="Guerrero">Guerrero</option>
+    <option value="Hidalgo">Hidalgo</option>
+    <option value="Jalisco">Jalisco</option>
+    <option value="Michoacán" selected>Michoacán</option>
+    <option value="Morelos">Morelos</option>
+    <option value="Nayarit">Nayarit</option>
+    <option value="Nuevo León">Nuevo León</option>
+    <option value="Oaxaca">Oaxaca</option>
+    <option value="Puebla">Puebla</option>
+    <option value="Querétaro">Querétaro</option>
+    <option value="Quintana Roo">Quintana Roo</option>
+    <option value="San Luis Potosí">San Luis Potosí</option>
+    <option value="Sinaloa">Sinaloa</option>
+    <option value="Sonora">Sonora</option>
+    <option value="Tabasco">Tabasco</option>
+    <option value="Tamaulipas">Tamaulipas</option>
+    <option value="Tlaxcala">Tlaxcala</option>
+    <option value="Veracruz">Veracruz</option>
+    <option value="Yucatán">Yucatán</option>
+    <option value="Zacatecas">Zacatecas</option>
+</select>
                 </div>
                 <div class="segmento-campo"><p>R.F.C.: <font color="red">*</font></p><input type="text" class="campo" name="rfc" required></div>
                 <div class="segmento-campo"><p>Página Web:</p><input type="text" class="campo" name="web"></div>
@@ -163,28 +89,6 @@
         </div>
     </form>
 </div>
-
-<script>
-    function marcarAdjunto(input) {
-        if (input.files.length > 0) {
-            input.classList.add('archivo-adjuntado');
-        } else {
-            input.classList.remove('archivo-adjuntado');
-        }
-    }
-
-    window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('status') === 'success') {
-            document.getElementById('modalExito').style.display = 'block';
-        }
-    };
-
-    function cerrarModal() {
-        document.getElementById('modalExito').style.display = 'none';
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }
-</script>
 
 <script src="js/funciones.js"></script>
 </body>

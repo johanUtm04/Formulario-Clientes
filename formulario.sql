@@ -46,7 +46,7 @@ CREATE TABLE `formulario_clientes` (
   `doc_ine_representanteLegal` varchar(255) DEFAULT NULL,
   `doc_comprobante_domicilio` varchar(255) DEFAULT NULL,
   `fecha_registro` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables

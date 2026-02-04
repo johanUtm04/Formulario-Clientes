@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root"; 
-$pass = ""; 
+$pass = "zorro2011"; 
 $db   = "formulario"; 
 
 $conexion = mysqli_connect($host, $user, $pass, $db);

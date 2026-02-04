@@ -15,8 +15,8 @@ $telefono     = mysqli_real_escape_string($conexion, $_POST['telefono']);
 $email = mysqli_real_escape_string($conexion, $_POST['email']);
 
 //3.-Lugar donde seran subidos en el servidor linux
-$ruta_videos = 'C:/Users/sistemas2/Videos/uploads_pihcsa/';
-$base_dir = $ruta_videos . $rfc . "/";
+$ruta_archivos = '/srv/www/htdocs/formulario_clientes/uploads/';
+$base_dir = $ruta_archivos . $rfc . "/";
 
 if (!file_exists($base_dir)) {
     mkdir($base_dir, 0777, true);
